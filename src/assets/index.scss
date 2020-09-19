@@ -1,0 +1,344 @@
+body {
+  height: 100vh;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 13px;
+  color: rgb(56, 61, 61);
+  background-color: rgb(200, 211, 194);
+}
+
+#app,
+.home {
+  height: 100%;
+}
+
+.main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-client-btn {
+  border-radius: 15px;
+  background-color: rgb(16, 140, 189);
+  cursor: pointer;
+  padding: 10px;
+  color: rgb(235, 234, 233);
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.star {
+  color: rgb(52, 129, 201);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  input,
+  select {
+    padding: 5px 10px;
+    margin: 0;
+    height: 30px;
+    border: 0;
+    box-sizing: border-box;
+    color: #71747a;
+    box-shadow: inset 0 0 3px #65686e;
+    border-radius: 5px;
+  }
+  input[type="radio"] {
+    box-shadow: none;
+  }
+  .create-client-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    p {
+      margin: -25px 0 0 41%;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    .invalid-client {
+      margin-top: -50px;
+    }
+    .create-client-form__content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 10px;
+    }
+    .create-client-form__main,
+    .create-client-form__address,
+    .create-client-form__pass {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      width: 100%;
+      max-width: 360px;
+      height: fit-content;
+      padding: 0 15px 15px 15px;
+      background: rgb(200, 200, 200);
+      box-shadow: 0 0 3px #000;
+    }
+    .create-client-form__main {
+      .create-client-form__item {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        align-items: center;
+        width: 100%;
+        label {
+          width: 38%;
+        }
+        input {
+          width: 62%;
+        }
+      }
+      .birthdate {
+        font-size: 14px;
+        padding: 10px;
+        height: 30px;
+      }
+      .gender-clientgroup {
+        display: flex;
+        gap: 15px;
+        width: 100%;
+        select {
+          height: fit-content;
+        }
+        .gender-input {
+          display: flex;
+          flex-direction: column;
+          width: 38%;
+          cursor: pointer;
+          label {
+            margin-left: 7px;
+            cursor: pointer;
+          }
+          .gender-input__item {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            input {
+              cursor: pointer;
+              height: fit-content;
+            }
+          }
+        }
+        .clientgroup-input {
+          display: flex;
+          flex-direction: column;
+          width: 62%;
+          select {
+            margin-top: 10px;
+            font-size: 14px;
+            option {
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+      .sms {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: fit-content;
+        input {
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
+        }
+        label {
+          cursor: pointer;
+          padding-left: 10px;
+        }
+      }
+    }
+    .create-client-form__address {
+      p {
+        margin-left: 75px;
+      }
+      .create-client-form__item {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        width: 100%;
+        label {
+          min-width: 60px;
+        }
+        input {
+          width: 100%;
+        }
+      }
+    }
+    .create-client-form__pass {
+      .create-client-form__item {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        width: 100%;
+        label {
+          min-width: 100px;
+        }
+        input {
+          width: 100%;
+        }
+      }
+      select {
+        width: 100%;
+      }
+      p {
+        margin-left: 115px;
+      }
+      .issueDate {
+        font-size: 14px;
+        padding: 5px 10px;
+        height: 30px;
+      }
+    }
+    .note {
+      margin-top: 20px;
+      text-align: center;
+    }
+    button {
+      background-color: #64c3ce;
+      color: #f2f2f2;
+      margin-top: 20px;
+      padding: 10px;
+      max-width: 150px;
+      width: 100%;
+      align-self: center;
+      line-height: 1em;
+      background: rgba(114, 212, 202, 1);
+      border-radius: 5px;
+      border: 0;
+      cursor: pointer;
+      border-top: 1px solid #b2ece6;
+      box-shadow: 0 0 0 1px #46a294, 0 2px 2px #808389;
+      color: #ffffff;
+      font-size: 1.5em;
+      text-shadow: 0 1px 2px #21756a;
+      &:hover {
+        background: linear-gradient(
+          to bottom,
+          rgba(107, 198, 186, 1) 0%,
+          rgba(57, 175, 154, 1) 100%
+        );
+      }
+    }
+    .success-msg {
+      color: rgb(23, 190, 23);
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+}
+
+.invalid-feedback {
+  color: rgb(221, 23, 23);
+}
+
+.select-pass {
+  width: 100%;
+  position: relative;
+  &::after {
+    content: "\276F";
+    transform: rotate(90deg);
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 2px);
+    height: 4px;
+    pointer-events: none;
+    cursor: pointer;
+  }
+  .select-pass__select {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    padding: 5px 30px 5px 10px;
+    margin: 0;
+    min-height: 30px;
+    border: 0;
+    box-sizing: border-box;
+    color: #71747a;
+    box-shadow: inset 0 0 3px #65686e;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  .select-pass__options {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+    border: none;
+    width: 100%;
+    background-color: #f2f2f2;
+    box-shadow: inset 0 0 3px #65686e;
+    padding: 0px;
+    border: 1px solid rgb(102, 102, 102);
+
+    .select-pass__option {
+      box-sizing: border-box;
+      padding: 10px;
+      cursor: pointer;
+      &:hover {
+        background-color: #d4d4d4;
+      }
+    }
+    .ok-btn {
+      padding: 5px 0 10px 0;
+      color:rgb(84, 84, 250);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        text-align: center;
+        height: 20px;
+        width: 40px;
+        border: 1px solid rgb(56, 104, 100);
+        background-color: rgb(85, 214, 186);
+        color: #f2f2f2;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(48, 172, 145);
+        }
+      }
+    }
+  }
+}
+
+.select-pass#attendingdoctor {
+  width: 62%;
+}
+
+.option-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  * {
+    cursor: pointer;
+  }
+  input {
+    box-shadow: none;
+    margin-left: 5px;
+  }
+  label {
+    width: 100%;
+    line-height: 30px;
+    padding: 5px;
+  }
+  &:hover {
+    background-color: #d4d4d4;
+  }
+}
